@@ -1,0 +1,122 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 3 (Pastel & Soft / Clean E-commerce)",
+  "design_philosophy": "A modern, mobile-first marketplace UI heavily inspired by OfferUp and Pinterest. Content (product images) is the absolute hero. Clean white backgrounds, tight structural grids, and two highly intentional colors: Bright Mint Green for trust/freshness and Vibrant Orange exclusively for high-intent actions.",
+  "colors": {
+    "primary": {
+      "hex": "#05C46B",
+      "tailwind": "bg-[#05C46B]",
+      "usage": "Brand identity, trusted UI elements, subtle accents, active states, 'Chatear' button."
+    },
+    "accent": {
+      "hex": "#FF6B00",
+      "tailwind": "bg-[#FF6B00]",
+      "usage": "Exclusively for primary conversion buttons: 'Publicar' (+), 'Hacer Oferta', 'Comprar'."
+    },
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F9FAFB",
+      "usage": "White background mostly. Secondary used for separation or light card backgrounds."
+    },
+    "text": {
+      "primary": "#111827",
+      "secondary": "#6B7280",
+      "muted": "#9CA3AF"
+    },
+    "border": "#E5E7EB"
+  },
+  "typography": {
+    "headings": {
+      "fontFamily": "Outfit, sans-serif",
+      "weights": ["600", "700", "800"],
+      "usage": "Product titles, section headers, big prices."
+    },
+    "body": {
+      "fontFamily": "DM Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Descriptions, locations, timestamps, regular UI text."
+    },
+    "sizes": {
+      "h1": "text-3xl sm:text-4xl font-bold tracking-tight",
+      "h2": "text-xl sm:text-2xl font-bold",
+      "h3": "text-lg font-semibold",
+      "price": "text-lg sm:text-xl font-bold text-gray-900",
+      "body": "text-sm sm:text-base text-gray-600",
+      "small": "text-xs text-gray-500"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous spacing. Allow the images to breathe.",
+    "container": "max-w-md mx-auto sm:max-w-3xl",
+    "feed_grid": "grid grid-cols-2 gap-3 sm:gap-4",
+    "card_radius": "rounded-2xl",
+    "button_radius": "rounded-full",
+    "category_icons": "flex gap-4 overflow-x-auto snap-x pb-4 scrollbar-hide",
+    "category_item": "flex flex-col items-center gap-2 min-w-[72px]"
+  },
+  "components": {
+    "buttons": {
+      "primary_action": "bg-[#FF6B00] hover:bg-[#E65A00] text-white rounded-full font-bold py-3 px-6 shadow-md transition-transform active:scale-95",
+      "secondary_action": "bg-[#05C46B] hover:bg-[#04A057] text-white rounded-full font-bold py-3 px-6 shadow-md transition-transform active:scale-95",
+      "outline": "border-2 border-[#05C46B] text-[#05C46B] rounded-full font-bold py-3 px-6 transition-transform active:scale-95"
+    },
+    "cards": {
+      "product": "bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col",
+      "image_container": "aspect-square w-full bg-gray-100 relative overflow-hidden",
+      "info_container": "p-3 flex flex-col gap-1"
+    },
+    "inputs": {
+      "search": "w-full bg-gray-100 rounded-full py-3 px-5 text-gray-900 placeholder-gray-500 outline-none focus:ring-2 focus:ring-[#05C46B]/50"
+    },
+    "bottom_nav": "fixed bottom-0 w-full bg-white border-t border-gray-100 flex justify-around items-center h-16 pb-safe z-50",
+    "icons": "lucide-react"
+  },
+  "media": {
+    "products": [
+      {
+        "url": "https://images.unsplash.com/photo-1759722668385-90006d9c7aa7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBsaXZpbmclMjByb29tJTIwc29mYXxlbnwwfHx8fDE3ODEwNTU0NjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern Grey Sofa",
+        "category": "Muebles"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1585060544812-6b45742d762f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx1c2VkJTIwc21hcnRwaG9uZSUyMG9uJTIwdGFibGV8ZW58MHx8fHwxNzgxMDU1NDY2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Used iPhone",
+        "category": "Celulares"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1611671107731-b7f49a23d416?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHx1c2VkJTIwa2l0Y2hlbiUyMHRhYmxlfGVufDB8fHx8MTc4MTA1NTQ4MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Kitchen Table",
+        "category": "Cocina"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxjbG90aGVzJTIwcmFja3xlbnwwfHx8fDE3ODEwNTU0ODF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Clothes Rack",
+        "category": "Ropa"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwcGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzgxMDU1NDY2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Smiling Woman"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1625241152315-4a698f74ceb7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwcGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzgxMDU1NDY2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Smiling Man"
+      }
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive elements MUST include 'data-testid' in kebab-case format."
+  },
+  "instructions_to_main_agent": [
+    "Develop as a mobile-first responsive layout (max-width containers on desktop).",
+    "Use Lucide-React for all icons. Ensure icons in the category scroller are circular, inside a light gray/mint-tinted circle background.",
+    "Implement the home screen with a top Location selector ('¿Dónde estás? [ Maldonado ▾ ]'), followed by a large search bar, horizontal category scrolling list, and a 2-column masonry or grid feed.",
+    "Cards in feed MUST have: full-width image, price (bold), and location/time (small gray text).",
+    "Product Detail Page MUST have: large image carousel, title, price, description, seller profile snippet with 5-star rating, and a sticky bottom bar with two CTAs: 'Chatear' (Mint Outline or Mint Solid) and 'Hacer Oferta' (Vibrant Orange Solid).",
+    "Ensure 'Vibrant Orange' is STRICTLY reserved for the most important actions ('Hacer Oferta', 'Comprar', 'Publicar' Floating Action Button or Bottom Nav center).",
+    "Follow the typography strictly: Outfit for headings, DM Sans for body.",
+    "No dark mode required as the brand requires a clean, well-lit white environment.",
+    "Add 'data-testid' to all buttons, inputs, and clickable cards."
+  ]
+}
