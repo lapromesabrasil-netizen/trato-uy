@@ -9,6 +9,7 @@ load_dotenv()
 
 app = FastAPI()
 
+# Configuración para que el frontend pueda hablar con el backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -16,7 +17,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-db = AsyncIOMotorClient(os.getenv("MONGO_URL")).trato_uy
+# Ruta raíz para evitar el error 404 al entrar al enlace
+@app.get("/")
+async def root():
+    return {"message": "Tu API está funcionando correctamente"}
+
+# Ruta para tu base de datos
+db = AsyncIOMotorClient(os.getenv("MONGO_URL")).trato_db
 
 @app.post("/api/listings")
 async def create_listing(
