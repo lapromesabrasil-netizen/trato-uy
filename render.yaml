@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: trato-uy
+    env: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"
