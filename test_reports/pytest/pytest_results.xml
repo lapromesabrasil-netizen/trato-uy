@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="17" skipped="0" tests="30" time="6.772" timestamp="2026-06-10T01:49:30.313302+00:00" hostname="agent-env-17a36194-3a94-434a-a923-db526581bc44"><testcase classname="backend.tests.backend_test" name="test_root" time="0.250" /><testcase classname="backend.tests.backend_test" name="test_departments" time="0.141" /><testcase classname="backend.tests.backend_test" name="test_categories" time="0.121" /><testcase classname="backend.tests.backend_test" name="test_register_age_required" time="0.132"><failure message="assert 422 == 400&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:70: in test_register_age_required
+    assert r.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_register_duplicate" time="0.455"><failure message="assert 422 == 409&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:77: in test_register_duplicate
+    assert r.status_code == 409
+E   assert 422 == 409
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_login_admin_and_cookie" time="0.343" /><testcase classname="backend.tests.backend_test" name="test_login_bad_pwd" time="0.336" /><testcase classname="backend.tests.backend_test" name="test_me_requires_auth" time="0.163" /><testcase classname="backend.tests.backend_test" name="test_me_with_token" time="0.157" /><testcase classname="backend.tests.backend_test" name="test_create_listing" time="0.101"><failure message="AssertionError: Internal Server Error&#10;assert 500 == 200&#10; +  where 500 = &lt;Response [500]&gt;.status_code">backend/tests/backend_test.py:106: in test_create_listing
+    assert r.status_code == 200, r.text
+E   AssertionError: Internal Server Error
+E   assert 500 == 200
+E    +  where 500 = &lt;Response [500]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_prohibited_words" time="0.116"><failure message="assert 500 == 400&#10; +  where 500 = &lt;Response [500]&gt;.status_code">backend/tests/backend_test.py:114: in test_prohibited_words
+    assert r.status_code == 400
+E   assert 500 == 400
+E    +  where 500 = &lt;Response [500]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_list_filters" time="0.152"><failure message="AssertionError: assert None in ['b1546be2-595d-4c8b-b580-6756514a66f7']">backend/tests/backend_test.py:120: in test_list_filters
+    assert LISTING_ID["id"] in ids
+E   AssertionError: assert None in ['b1546be2-595d-4c8b-b580-6756514a66f7']</failure></testcase><testcase classname="backend.tests.backend_test" name="test_get_listing_with_seller" time="0.100"><failure message="assert 404 == 200&#10; +  where 404 = &lt;Response [404]&gt;.status_code">backend/tests/backend_test.py:124: in test_get_listing_with_seller
+    assert r.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = &lt;Response [404]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_delete_listing_not_owner" time="0.466"><failure message="assert 404 == 403&#10; +  where 404 = &lt;Response [404]&gt;.status_code">backend/tests/backend_test.py:129: in test_delete_listing_not_owner
+    assert r.status_code == 403
+E   assert 404 == 403
+E    +  where 404 = &lt;Response [404]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_seller_cant_offer_own" time="0.109"><failure message="assert 422 == 400&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:138: in test_seller_cant_offer_own
+    assert r.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_buyer_creates_offer" time="0.134"><failure message="assert 422 == 200&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:143: in test_buyer_creates_offer
+    assert r.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_offer_received_sent" time="0.138"><failure message="assert False&#10; +  where False = any(&lt;generator object test_offer_received_sent.&lt;locals&gt;.&lt;genexpr&gt; at 0xfc1722c64900&gt;)">backend/tests/backend_test.py:150: in test_offer_received_sent
+    assert any(o["id"] == OFFER_ID["id"] for o in rr.json()["offers"])
+E   assert False
+E    +  where False = any(&lt;generator object test_offer_received_sent.&lt;locals&gt;.&lt;genexpr&gt; at 0xfc1722c64900&gt;)</failure></testcase><testcase classname="backend.tests.backend_test" name="test_offer_action_forbidden_for_buyer" time="0.197"><failure message="assert 404 == 403&#10; +  where 404 = &lt;Response [404]&gt;.status_code">backend/tests/backend_test.py:158: in test_offer_action_forbidden_for_buyer
+    assert r.status_code == 403
+E   assert 404 == 403
+E    +  where 404 = &lt;Response [404]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_offer_action_accept" time="0.129"><failure message="assert (404 == 200)&#10; +  where 404 = &lt;Response [404]&gt;.status_code">backend/tests/backend_test.py:163: in test_offer_action_accept
+    assert r.status_code == 200 and r.json()["status"] == "accepted"
+E   assert (404 == 200)
+E    +  where 404 = &lt;Response [404]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_self_message_blocked" time="0.110"><failure message="assert 422 == 400&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:170: in test_self_message_blocked
+    assert r.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_send_and_thread" time="0.160"><failure message="assert 422 == 200&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:175: in test_send_and_thread
+    assert r.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_rating_self_blocked" time="0.100"><failure message="assert 422 == 400&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:189: in test_rating_self_blocked
+    assert r.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_rating_create_and_dup" time="0.111"><failure message="assert 422 == 200&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:194: in test_rating_create_and_dup
+    assert r.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_create_report" time="0.213"><failure message="assert 422 == 200&#10; +  where 422 = &lt;Response [422]&gt;.status_code">backend/tests/backend_test.py:208: in test_create_report
+    assert r.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = &lt;Response [422]&gt;.status_code</failure></testcase><testcase classname="backend.tests.backend_test" name="test_admin_non_admin_blocked" time="0.123" /><testcase classname="backend.tests.backend_test" name="test_admin_stats" time="0.491" /><testcase classname="backend.tests.backend_test" name="test_admin_reports_users_listings" time="0.364" /><testcase classname="backend.tests.backend_test" name="test_admin_ban_unban" time="0.665" /><testcase classname="backend.tests.backend_test" name="test_admin_resolve_report" time="0.117" /><testcase classname="backend.tests.backend_test" name="test_admin_delete_listing" time="0.216" /></testsuite></testsuites>
